@@ -1,33 +1,48 @@
 import React from "react";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-gray-800 px-6 py-3">
-      <div className="flex justify-between items-center max-w-7xl mx-auto">
-        
-        {/* Logo */}
-        <h1 className="text-white text-xl font-bold cursor-pointer">
-          Logo
-        </h1>
+    <nav className="w-ful py-1 px-2 shadow-md">
+      <div className="flex justify-between items-center">
 
-        {/* Menu */}
-        <ul className="flex gap-6 text-white">
-          <li>
-            <a href="/" className="hover:text-gray-300 transition">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/About" className="hover:text-gray-300 transition">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/Services" className="hover:text-gray-300 transition">
-              Services
-            </a>
-          </li>
-        </ul>
+        {/* Logo */}
+        <div className="ml-12">
+          <h1 className="text-white text-xl font-bold cursor-pointer">
+            <a href="/"><img src="/logo.webp" alt="logo" className="w-28" /></a>
+          </h1>
+        </div>
+
+        {/*Desktop Menu */}
+        <div>
+          <ul className="flex gap-6 text-[#1E4491] font-bold text-md">
+            <li>
+              <a href="/Training" className="hover:text-[#FFA500] transition">Training</a>
+            </li>
+            <li>
+              <a href="/Treatments" className="hover:text-[#FFA500] transition">Treatments</a>
+            </li>
+            <li>
+              <a href="/Contact" className="hover:text-[#FFA500] transition">Contact Us</a>
+            </li>
+            <li>
+              <a href="/FAQ" className="hover:text-[#FFA500] transition">FAQ</a>
+            </li>
+            <li>
+              <a href="/Reviews" className="hover:text-[#FFA500] transition">Reviews</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          {/* icons */}
+          <ul className="flex gap-4 text-md justify-center items-center">
+            <li><a href="#"><MdOutlineShoppingCart className="text-xl" /></a></li>
+            <li><a href="#"><FaSearch /></a></li>
+            <li><a href="#" className="text-blue-500">Login/Register</a></li>
+          </ul>
+        </div>
 
       </div>
     </nav>
